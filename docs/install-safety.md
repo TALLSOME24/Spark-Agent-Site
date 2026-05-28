@@ -116,7 +116,7 @@ Users can change this later in Telegram with `/access 1`, `/access 2`, `/access 
 - Spark CLI commit: `7ab32b23003726dcea8a414c8e9395bf13f45e12`
 - Node: `22.18.0`
 - Python: `3.11`
-- uv: `0.11.7`
+- uv: `0.11.16`
 
 ## After Install
 

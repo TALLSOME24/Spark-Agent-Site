@@ -4,7 +4,7 @@ param(
     [string]$Ref = "7ab32b23003726dcea8a414c8e9395bf13f45e12",
     [string]$NodeVersion = "22.18.0",
     [string]$PythonVersion = "3.11",
-    [string]$UvVersion = "0.11.7",
+    [string]$UvVersion = "0.11.16",
     [string]$Bundle = "telegram-starter",
     [string]$BotToken = "",
     [string]$AdminTelegramIds = "",
@@ -148,8 +148,8 @@ function Get-UvPlatform {
 function Get-UvAssetSha256 {
     param([string]$Asset)
     switch ($Asset) {
-        "uv-aarch64-pc-windows-msvc.zip" { return "1387e1c94e15196351196b79fce4c1e6f4b30f19cdaaf9ff85fbd6b046018aa2" }
-        "uv-x86_64-pc-windows-msvc.zip" { return "fe0c7815acf4fc45f8a5eff58ed3cf7ae2e15c3cf1dceadbd10c816ec1690cc1" }
+        "uv-aarch64-pc-windows-msvc.zip" { return "e4f8e70eb21f0f4efd2eeb159ab289f9a16057d59881a4475758be4ce39bc8c5" }
+        "uv-x86_64-pc-windows-msvc.zip" { return "dd9d6d6554bfab265bfa98aa8e8a406c5c3a7b97582f93de1f4d48d9154a0395" }
         default { throw "No pinned uv checksum for asset: $Asset" }
     }
 }

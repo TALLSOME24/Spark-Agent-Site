@@ -12,7 +12,7 @@ fi
 SPARK_CLI_REF="${SPARK_CLI_REF:-$SPARK_DEFAULT_CLI_REF}"
 SPARK_NODE_VERSION="${SPARK_NODE_VERSION:-22.18.0}"
 SPARK_PYTHON_VERSION="${SPARK_PYTHON_VERSION:-3.11}"
-SPARK_UV_VERSION="${SPARK_UV_VERSION:-0.11.7}"
+SPARK_UV_VERSION="${SPARK_UV_VERSION:-0.11.16}"
 SPARK_SKIP_SETUP="${SPARK_SKIP_SETUP:-0}"
 SPARK_AUTOSTART_USER_SET=0
 if [ -n "${SPARK_AUTOSTART+x}" ]; then
@@ -60,7 +60,7 @@ Options:
   --ref REF                 developer override for git ref; requires --allow-dev-source
   --node-version VERSION    Managed Node version (default: 22.18.0)
   --python-version VERSION  Managed Python version used via uv when needed (default: 3.11)
-  --uv-version VERSION      Managed uv version used for Python when needed (default: 0.11.7)
+  --uv-version VERSION      Managed uv version used for Python when needed (default: 0.11.16)
   --managed-node            Force Spark's verified managed Node download even if system Node is good
   --bundle NAME             Bundle for setup (default: telegram-starter)
   --bot-token TOKEN         Telegram BotFather token passed to setup
@@ -317,10 +317,10 @@ detect_uv_platform() {
 
 uv_asset_sha256() {
   case "$1" in
-    uv-aarch64-apple-darwin.tar.gz) printf '66e37d91f839e12481d7b932a1eccbfe732560f42c1cfb89faddfa2454534ba8' ;;
-    uv-x86_64-apple-darwin.tar.gz) printf '0a4bc8fcde4974ea3560be21772aeecab600a6f43fa6e58169f9fa7b3b71d302' ;;
-    uv-aarch64-unknown-linux-gnu.tar.gz) printf 'f2ee1cde9aabb4c6e43bd3f341dadaf42189a54e001e521346dc31547310e284' ;;
-    uv-x86_64-unknown-linux-gnu.tar.gz) printf '6681d691eb7f9c00ac6a3af54252f7ab29ae72f0c8f95bdc7f9d1401c23ea868' ;;
+    uv-aarch64-apple-darwin.tar.gz) printf '2b25be1af546be330b340b0a76b99f989daa6d92678fdffb87438e661e9d88fb' ;;
+    uv-x86_64-apple-darwin.tar.gz) printf '6b91ae3de155f51bd1f5b74814821c79f016a176561f252cd9ddfb976939af2e' ;;
+    uv-aarch64-unknown-linux-gnu.tar.gz) printf '8c9d0f0ee98166ae6ab198747519ba6f25db29d185bd2ae5960ecebc91a5c22a' ;;
+    uv-x86_64-unknown-linux-gnu.tar.gz) printf '74947fe2c03315cf07e82ab3acc703eddef01aba4d5232a98e4c6825ec116131' ;;
     *)
       echo "No pinned uv checksum for asset: $1" >&2
       exit 1

@@ -10,8 +10,8 @@
     "text": "https://agent.sparkswarm.ai/install/checksums.txt",
     "json": "https://agent.sparkswarm.ai/install/checksums.json",
     "sha256": {
-      "install.sh": "7795e9914af7a46e7b50c546425f39eacfefe234edf3d52032e06ce07da9897c",
-      "install.ps1": "616901c5ab23bd88f44464ddd5801e76c6c4bf73ea80283a521ac1338613b315"
+      "install.sh": "1f7ef6867fe7af4dd4ca15df7ad70afe2bd8e57d549ba1b9523512251506ddc0",
+      "install.ps1": "23dc9aace11d4458d2267c5d0a4e7d8fd71415cb97e79a3f17803498555ed29c"
     }
   },
   "releaseManifest": "https://agent.sparkswarm.ai/install/release-manifest.json",
